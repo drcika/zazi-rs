@@ -1,1 +1,89 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  body {
+    background: url(assets/bg.png) center bottom fixed;
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    font-size: 1.2rem;
+    color: #fff;
+    overflow-y: scroll !important;
+    .navbar {
+      background-color: #000;
+      li {
+        margin-left: 10px;
+        div#dropdown-menu {
+          a:hover {
+            background-color: #9933CC;
+            color: white;
+          }
+        }
+      }
+    }
+    .router-class {
+      .container {
+        min-height: 79.5vh;
+        a.btn {
+          font-size: 1rem;
+          letter-spacing: 2px;
+          background-color: rgba(0, 0, 0, 0.7) !important;
+          box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.5);
+        }
+        .card-body {
+          background-color: rgba(0, 0, 0, 0.7);
+          box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.5);
+        }
+        h1,
+        h {
+          text-shadow: 1px 1px #000;
+        }
+        h6 {
+          line-height: 1.7;
+        }
+        a,
+        .fa-lg {
+          color: inherit;
+          .view {
+            cursor: pointer;
+          }
+        }
+        .fa-lg {
+          color: white;
+        }
+        
+        ng-temlate {
+          img {
+            height: 225px;
+            width: auto;
+            padding: 5px;
+          }
+        }
+        .form-dark {
+        form {
+          color: #fff;
+          .md-form {
+            .prefix {
+              color: #fff;
+            }
+            label {
+              color: #fff;
+            }
+            
+            input:focus:not([readonly]),textarea:focus:not([readonly]), .ng-valid, .counter-success {
+              border-bottom: 1px solid #fff !important;
+              box-shadow: 0 1px 0 0 #fff;
+              color: #fff;
+            }
+          }
+        }}
+      }
+    }
+    footer {
+      background-color: #000;
+      font-size: 1rem;
+    }
+  }
+}

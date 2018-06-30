@@ -1,0 +1,39 @@
+<div class="container" gallerize>
+  <ng-container *ngIf="imageData">
+    <ng-temlate *ngIf="kolekcija.id === 'okoLavirinta'">
+      <h1 class="text-center my-5">Collection "Oko Lavirinta"</h1>
+
+      <div class="grid">
+        <div class="grid-item">
+          <img *ngFor="let img of imageData.okoLavirinta.srcUrl" [src]="img">
+      </div></div>
+
+    </ng-temlate>
+    <ng-temlate *ngIf="kolekcija.id === 'dontTouchme'">
+      <h1 class="text-center my-5">Collection "Don't touch me"</h1>
+      <div class="grid">
+      <div class="grid-item">
+        <img *ngFor="let img of imageData.dontTouchme.srcUrl" [src]="img">
+      </div></div>
+
+    </ng-temlate>
+    <ng-temlate *ngIf="kolekcija.id === 'myWorld'">
+      <h1 class="text-center my-5">Collection "My world"</h1>
+
+      <div class="grid">
+        <div class="grid-item">
+          <img *ngFor="let img of imageData.myWorld.srcUrl" [src]="img">
+      </div></div>
+      
+    </ng-temlate>
+    <ng-temlate *ngIf="kolekcija.id === 'commercialShoes'">
+      <h1 class="text-center my-5">Commercial shoes</h1>
+
+      <div class="grid">
+        <div class="grid-item">
+          <img *ngFor="let img of imageData.commercialShoes.srcUrl" [src]="img">
+      </div></div>
+
+    </ng-temlate>
+  </ng-container>
+</div>
