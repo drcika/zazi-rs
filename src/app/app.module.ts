@@ -42,7 +42,9 @@ import { GallerizeModule } from '@ngx-gallery/gallerize';
     MDBBootstrapModule.forRoot(),
     BrowserAnimationsModule,
     GalleryModule.forRoot(),
-    LightboxModule.forRoot(),
+    LightboxModule.forRoot({
+      panelClass: 'fullscreen'
+    }),
     GallerizeModule,
   ],
   schemas: [NO_ERRORS_SCHEMA],

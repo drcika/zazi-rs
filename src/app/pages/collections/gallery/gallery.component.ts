@@ -9,7 +9,8 @@ import { Lightbox } from '@ngx-gallery/lightbox';
 
 @Component({
   selector: 'app-gallery',
-  templateUrl: './gallery.component.html'
+  templateUrl: './gallery.component.html',
+  styleUrls: ['./gallery.component.scss']
 })
 export class GalleryComponent implements OnInit {
  public imageData: ImageModel;
@@ -38,9 +39,7 @@ export class GalleryComponent implements OnInit {
   }
 
   openLightbox() {
-    this.lightbox.open(0, 'lightbox', {
-      panelClass: 'fullscreen'
-    });
+    this.lightbox.open(0, 'lightbox');
   }
 
 }
