@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { WOW } from 'wowjs/dist/wow.min';
+import { WOW } from 'wowjs/dist/wow';
 
 @Injectable({
   providedIn: 'root'
