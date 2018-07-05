@@ -1,11 +1,14 @@
 export class ContactModel {
   public name: string;
-  public email: string;
+  public eMail: string;
   public message: string;
+  public date?: Date;
 
-  constructor( name: string, email: string, message: string) {
+
+  constructor( name: string, eMail: string, message: string, date: Date) {
     this.name = name;
-    this.email = email;
+    this.eMail = eMail;
     this.message = message;
+    this.date = date;
   }
 } 

@@ -20,7 +20,8 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit() {
-    this.httpService.postData(this.contactForm.value);
+    this.httpService.addDataToDatabase(this.contactForm.value);
+    this.contactForm.reset();
   }
 
   private initForm() {

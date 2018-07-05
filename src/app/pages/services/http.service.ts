@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { AngularFirestore } from 'angularfire2/firestore';
 
 import { ContactModel } from '../contact/contact.model';
 
@@ -8,14 +9,21 @@ import { ContactModel } from '../contact/contact.model';
 })
 export class HttpService {
 
-  constructor(private http: HttpClient) { }
+  // private newMessages: ContactModel;
 
+  constructor(private http: HttpClient, private db: AngularFirestore) { }
+
+  // addNewContactToDb() {
+  //   this.addDataToDatabase({
+  //     ...this.newMessages,
+  //   });
+  // }
   getData() {
     return this.http.get('/assets/data/gallery.json');
   }
 
-  postData(contact: ContactModel) {
+  addDataToDatabase(contact: ContactModel) {
     console.log(contact);
-    this.http.post('/assets/data/sendmail.php', contact);
+    this.db.collection('messages').add(contact);
   }
 }
