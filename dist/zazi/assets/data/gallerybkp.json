@@ -1,0 +1,22 @@
+[
+  {
+    "id": "okoLavirinta",
+    "name": "Oko Lavirinta",
+    "srcUrl": [ "./assets/images//okolavirinta/1334.jpg", "./assets/images//okolavirinta/1338.jpg", "./assets/images//okolavirinta/1417.jpg", "./assets/images//okolavirinta/1437.jpg", "./assets/images//okolavirinta/1458.jpg", "./assets/images//okolavirinta/1469.jpg", "./assets/images//okolavirinta/1497.jpg", "./assets/images//okolavirinta/1504.jpg", "./assets/images//okolavirinta/1508.jpg", "./assets/images//okolavirinta/1532.jpg", "./assets/images//okolavirinta/1539.jpg", "./assets/images//okolavirinta/1547.jpg", "./assets/images//okolavirinta/1548.jpg", "./assets/images//okolavirinta/1568.jpg", "./assets/images//okolavirinta/1572.jpg", "./assets/images//okolavirinta/1574.jpg", "./assets/images//okolavirinta/1578.jpg", "./assets/images//okolavirinta/1599.jpg", "./assets/images//okolavirinta/1635.jpg", "./assets/images//okolavirinta/1642.jpg", "./assets/images//okolavirinta/1648.jpg", "./assets/images//okolavirinta/1662.jpg", "./assets/images//okolavirinta/1730.jpg", "./assets/images//okolavirinta/1739.jpg", "./assets/images//okolavirinta/1747.jpg", "./assets/images//okolavirinta/1755.jpg", "./assets/images//okolavirinta/3612.jpg", "./assets/images//okolavirinta/3617.jpg", "./assets/images//okolavirinta/3645.jpg", "./assets/images//okolavirinta/3655.jpg", "./assets/images//okolavirinta/3672.jpg", "./assets/images//okolavirinta/3675.jpg", "./assets/images//okolavirinta/3689.jpg", "./assets/images//okolavirinta/3704.jpg", "./assets/images//okolavirinta/3738.jpg", "./assets/images//okolavirinta/3743.jpg", "./assets/images//okolavirinta/3745.jpg", "./assets/images//okolavirinta/3746.jpg","./assets/images//okolavirinta/3752.jpg", "./assets/images//okolavirinta/3759.jpg", "./assets/images//okolavirinta/3768.jpg", "./assets/images//okolavirinta/3774.jpg", "./assets/images//okolavirinta/3816.jpg", "./assets/images//okolavirinta/3828.jpg", "./assets/images//okolavirinta/3844.jpg", "./assets/images//okolavirinta/3895.jpg", "./assets/images//okolavirinta/3965.jpg", "./assets/images//okolavirinta/3974.jpg"]
+  },
+  {
+    "id": "dontTouchme",
+    "name": "Don't Touch me",
+    "srcUrl": [ "./assets/images//donttouchme/008.jpg", "./assets/images//donttouchme/011.jpg", "./assets/images//donttouchme/012.jpg", "./assets/images//donttouchme/013.jpg", "./assets/images//donttouchme/014.jpg", "./assets/images//donttouchme/015.jpg", "./assets/images//donttouchme/016.jpg", "./assets/images//donttouchme/017.jpg", "./assets/images//donttouchme/018.jpg", "./assets/images//donttouchme/019.jpg", "./assets/images//donttouchme/020.jpg", "./assets/images//donttouchme/021.jpg", "./assets/images//donttouchme/022.jpg", "./assets/images//donttouchme/023.jpg", "./assets/images//donttouchme/024.jpg", "./assets/images//donttouchme/zoranapetrovic_7870.jpg", "./assets/images//donttouchme/zoranapetrovic_7871.jpg", "./assets/images//donttouchme/zoranapetrovic_7872.jpg", "./assets/images//donttouchme/zoranapetrovic_7873.jpg", "./assets/images//donttouchme/zoranapetrovic_7876.jpg", "./assets/images//donttouchme/zoranapetrovic_7877.jpg", "./assets/images//donttouchme/zoranapetrovic_7878.jpg", "./assets/images//donttouchme/zoranapetrovic_7880.jpg", "./assets/images//donttouchme/zoranapetrovic_7881.jpg", "./assets/images//donttouchme/zoranapetrovic_7882.jpg", "./assets/images//donttouchme/zoranapetrovic_7883.jpg"]
+  },
+  {
+   "id": "myWorld",
+   "name": "My World",
+   "srcUrl": [ "./assets/images//myworld/012.jpg", "./assets/images//myworld/014.jpg", "./assets/images//myworld/018.jpg", "./assets/images//myworld/001.jpg", "./assets/images//myworld/002.jpg", "./assets/images//myworld/003.jpg", "./assets/images//myworld/004.jpg", "./assets/images//myworld/005.jpg", "./assets/images//myworld/006.jpg", "./assets/images//myworld/007.jpg", "./assets/images//myworld/008.jpg", "./assets/images//myworld/009.jpg", "./assets/images//myworld/010.jpg", "./assets/images//myworld/011.jpg"]
+  },
+  {
+    "id": "commercialShoes",
+    "name": "Commercial Shoes",
+    "srcUrl": [ "./assets/images//komercialnaobuca/104_4142.jpg", "./assets/images//komercialnaobuca/104_4143.jpg", "./assets/images//komercialnaobuca/104_4144.jpg", "./assets/images//komercialnaobuca/104_4145.jpg", "./assets/images//komercialnaobuca/104_4146.jpg", "./assets/images//komercialnaobuca/104_4147.jpg", "./assets/images//komercialnaobuca/104_4148.jpg", "./assets/images//komercialnaobuca/104_4149.jpg", "./assets/images//komercialnaobuca/104_4150.jpg", "./assets/images//komercialnaobuca/104_4151.jpg"]
+  }
+]
