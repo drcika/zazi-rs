@@ -25,9 +25,9 @@ const app = express();
 // app.set('views', 'dist/zazi')
 
 // app.get('/', angularRouter);
-app.use(express.static(`/dist/zazi`))
+app.use(express.static(`./dist/zazi`))
 app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname,'/dist/zazi/index.html'));
+  res.sendFile(path.join(__dirname,'./dist/zazi/index.html'));
 });
 
 app.listen(precess.env.PORT || 8080, () => {
