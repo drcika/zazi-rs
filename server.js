@@ -27,6 +27,6 @@ app.get('/', angularRouter);
 app.use(express.static(`${__dirname}/dist/zazi`))
 app.get('*', angularRouter);
 
-app.listen(3000, () => {
+app.listen(4200, () => {
   console.log('server');
 });
