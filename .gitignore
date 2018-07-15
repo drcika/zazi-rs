@@ -8,9 +8,9 @@
 /dist/server
 /dist
 dist
-assets
-/assets
-/assets/*
+src/assets
+src/assets
+/src/assets/*
 
 # dependencies
 /node_modules
