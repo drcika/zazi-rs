@@ -4,13 +4,8 @@
 /tmp
 /out-tsc
 /e2e
-/dist/zazi
-/dist/server
 /dist
-dist
-src/assets
-src/assets
-/src/assets/*
+/src/assets
 
 # dependencies
 /node_modules
