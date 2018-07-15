@@ -1,73 +1,48 @@
 <?php
-// Change this with your blog name and email address
-$the_blogname   = 'Email poslat sa sajta';
-$the_myemail 	= 'zazi@zazi.rs';
-
-if(isset($_POST['email'])){
-		error_reporting(0);	
-		$errorC = false;
-
-		$the_name 		= $_POST['name'];
-		$the_email 		= $_POST['email'];
-		$the_message 	= $_POST['message'];
-		
-		$date = date ("l, F jS, Y"); 
-		$time = date ("h:i A"); 
-		
-		//added fields that are not set explicit like the once above are combined and added before the actual message
-		$already_used = array('email','name','message','phone','fax','company','website','myblogname','tempcode','temp_url','ajax');
-		$attach = '';
-		
-		foreach ($_POST as $key => $field)
-		{
-			if(!in_array($key,$already_used))
-			{
-				$attach.= $key.": ".$field."<br /> \n";
-			}
-		}
-		$attach.= "<br /> \n";
-		
-		if(!checkmymail($the_email))
-		{
-			$errorC = true;
-			$the_emailclass = "error";
-		}else{
-			$the_emailclass = "valid";
-			}
-		
-		if($the_message == "")
-		{
-			$errorC = true;
-			$the_messageclass = "error";
-		}else{
-			$the_messageclass = "valid";
-			}
-		
-		if($errorC == false)
-		{ 	
-			$to      =  $the_myemail;
-			$subject = "" . $the_blogname;
-			$header .= 'From:'. $the_email  . " \r\n";
-			$message1 = nl2br($the_message);
-
-			if(!empty($the_name)) 		$the_name 		= "Name:  	$the_name ";
-			if(!empty($the_email)) 	$the_email 	= "Email: $the_email ";
-			
-			$message = "$date at $time.\r\n $the_name \r\n Message:$message1";
-			
-			if(@mail($to,$subject,$message,$header)) $send = true; else $send = false;
-			
-			if(isset($_POST['ajax'])){
-			
-			}
-		}
-		
+ 
+header('Content-type: application/json');
+ 
+$errors = '';
+ 
+if(empty($errors))
+{
+ 
+	$postdata = file_get_contents("php://input");
+	$request = json_decode($postdata);
+ 
+	$from_email = $request->eMail;
+	$message = $request->message;
+	$from_name = $request->name;
+ 
+	$to_email = 'zazi@zazi.rs';
+ 
+	$contact = "<p><strong>Name:</strong> $from_name</p>
+							<p><strong>Email:</strong> $from_email</p>";
+	$content = "<p>$message</p>";
+ 
+	$website = 'Email poslat sa sajta';
+	$email_subject = "$website: Poruka od $from_name";
+ 
+	$email_body = '<html><body>';
+	$email_body .= "$contact $content";
+	$email_body .= '</body></html>';
+ 
+	$headers .= "MIME-Version: 1.0\r\n";
+	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+	$headers .= "From: $from_email\n";
+	$headers .= "Reply-To: $from_email";
+ 
+	mail($to_email,$email_subject,$email_body,$headers);
+ 
+	$response_array['status'] = 'success';
+	$response_array['from'] = $from_email;
+	echo json_encode($response_array);
+	echo json_encode($from_email);
+	header($response_array);
+	return $from_email;
+} else {
+	$response_array['status'] = 'error';
+	echo json_encode($response_array);
+	header('Location: /error.html');
 }
-	
-	
-function checkmymail($mailadresse){
-	$email_flag=preg_match("!^\w[\w|\.|\-]+@\w[\w|\.|\-]+\.[a-zA-Z]{2,4}$!",$mailadresse);
-	return $email_flag;
-}
-
 ?>

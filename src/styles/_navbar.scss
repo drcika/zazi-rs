@@ -1,0 +1,11 @@
+.navbar {
+  background-color: $bg-color-primarily;
+  li {
+    margin-left: 10px;
+    div#dropdown-menu {
+      a:hover {
+        background-color: $bg-color-secondary;
+      }
+    }
+  }
+}

@@ -1,120 +1,39 @@
-html {
-  height: 100%;
-  box-sizing: border-box;
-  body {
-    background: url(assets/bg.png) center bottom fixed;
-    font-family: 'Roboto', sans-serif;
-    height: 100%;
-    font-size: 1.2rem;
-    color: #fff;
-    overflow-y: scroll !important;
-    .navbar {
-      background-color: rgba(0, 0, 0, 0.8);
-      li {
-        margin-left: 10px;
-        div#dropdown-menu {
-          a:hover {
-            background-color: #9933CC;
-            color: white;
-          }
-        }
-      }
-    }
-    .card-shadow {
-      background-color: rgba(0, 0, 0, 0.8);
-      box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.5);
-    }
+@import 'styles/variables';
+@import 'styles/navbar';
+@import 'styles/form';
+@import 'styles/lightbox';
 
-    .router-class {
-      .container {
-        min-height: 79.5vh;
-        padding: 0;
-        a.btn {
-          font-size: 1rem;
-          letter-spacing: 2px;
-          background-color: rgba(0, 0, 0, 0.7) !important;
-          box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.5);
-        }
-        h1,
-        h {
-          text-shadow: 1px 1px #000;
-        }
-        h6 {
-          line-height: 1.7;
-        }
-        a,
-        .fa-lg {
-          color: inherit;
-          .view {
-            cursor: pointer;
-          }
-        }
-        .fa-lg {
-          color: white;
-        }
-        ng-temlate {
-          * {
-            outline: none;
-          }
-          img {
-            width: auto;
-            height: 200px;
-            margin: 5px;
-            box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.5);
-          }
-        }
-        .form-dark {
-          form {
-            color: #fff;
-            .md-form {
-              .prefix {
-                color: #fff;
-              }
-              label {
-                color: #fff;
-              }
-              input:focus:not([readonly]),
-              textarea:focus:not([readonly]),
-              .ng-valid,
-              .counter-success {
-                border-bottom: 1px solid #fff !important;
-                box-shadow: 0 1px 0 0 #fff;
-                color: #fff;
-              }
-            }
-          }
+body {
+  background: url(assets/bg.png) center bottom fixed;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  color: $txt-color;
+  overflow-y: scroll !important;
+  
+  .card-shadow {
+    background-color: $bg-color-primarily;
+    box-shadow: $white-shadow;
+  }
+  .router-class {
+    .container {
+      min-height: 79.5vh;
+      a.btn {
+        font-size: 1rem;
+        letter-spacing: 2px;
+        background-color: $bg-color-primarily !important;
+        box-shadow: $white-shadow;
+      }
+      a,
+      .fa-lg {
+        color: $txt-color;
+        .view {
+          cursor: pointer;
         }
       }
     }
-    footer {
-      background-color: #000;
-      font-size: 1rem;
-    }
   }
-  div.slide {
-    div {
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      background-size: contain;
-      background-position: center center;
-      background-repeat: no-repeat;
-    }
-  }
-  div.g-thumb {
-    div {
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      background-size: contain;
-      background-position: center center;
-      background-repeat: no-repeat;
-    }
-  }
-  .custom-height {
-    height: 350px;
-    img {
-      min-height: 100%;
-      min-width: 250px;
-      width: auto;
-    }
+  footer {
+    background-color: $bg-color-primarily;
+    font-size: 1rem;
   }
 }

@@ -1,0 +1,18 @@
+.form-dark {
+  form {
+    .md-form {
+      .prefix,
+      label {
+        color: $txt-color;
+      }
+      input:focus:not([readonly]),
+      textarea:focus:not([readonly]),
+      .ng-valid,
+      .counter-success {
+        border-bottom: 1px solid #fff !important;
+        box-shadow: 0 1px 0 0 #fff;
+        color: $txt-color;
+      }
+    }
+  }
+}
