@@ -4,7 +4,7 @@
       
       <ng-temlate *ngIf="kolekcija.id === 'okoLavirinta'">
         <h2 class="my-4 pt-4">Collection "Oko Lavirinta"</h2>
-        <img class="" *ngFor="let img of imageData.okoLavirinta.srcUrl" [src]="img">
+        <img class="" *ngFor="let img of imageData[0].srcUrl" [src]="img">
       </ng-temlate>
 
       <ng-temlate *ngIf="kolekcija.id === 'dontTouchme'">

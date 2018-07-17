@@ -19,7 +19,7 @@ export class HttpService {
   //   });
   // }
   getData() {
-    return this.http.get('/assets/data/gallery.json');
+    return this.http.get('/assets/data/data.json');
   }
 
   addDataToDatabase(contact: ContactModel) {
