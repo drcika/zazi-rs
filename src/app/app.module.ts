@@ -7,9 +7,11 @@ import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { MatButtonModule, MatButtonToggleModule, MatMenuModule, MatToolbarModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { MenuItemComponent } from './navigation/menu-item/menu-item.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { BiographyComponent } from './pages/biography/biography.component';
@@ -25,6 +27,7 @@ import { GalleryModule } from '@ngx-gallery/core';
 import { LightboxModule } from '@ngx-gallery/lightbox';
 import { GallerizeModule } from '@ngx-gallery/gallerize';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,11 +37,16 @@ import { GallerizeModule } from '@ngx-gallery/gallerize';
     BiographyComponent,
     ContactComponent,
     CollectionsComponent,
-    GalleryComponent
+    GalleryComponent,
+    MenuItemComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'zazi-app'}),
     AppRoutingModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatMenuModule,
+    MatToolbarModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
@@ -54,6 +62,6 @@ import { GallerizeModule } from '@ngx-gallery/gallerize';
   ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [HttpService, WowService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

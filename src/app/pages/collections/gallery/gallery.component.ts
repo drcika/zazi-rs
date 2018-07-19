@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 
 import { HttpService } from '../../services/http.service';
-import { DataModel } from '../../../data.model';
+import { dataModel } from '../../../data.model';
 
 import { Gallery } from '@ngx-gallery/core';
 import { Lightbox } from '@ngx-gallery/lightbox';
@@ -13,7 +13,7 @@ import { Lightbox } from '@ngx-gallery/lightbox';
   styleUrls: ['./gallery.component.scss']
 })
 export class GalleryComponent implements OnInit {
- public imageData: DataModel;
+ public imageData: dataModel[];
  public kolekcija: {id: string};
 
   constructor( 
@@ -33,7 +33,7 @@ export class GalleryComponent implements OnInit {
       }
     );
     this.httpService.getData()
-    .subscribe((data: DataModel): void => {
+    .subscribe((data: dataModel): void => {
       this.imageData = data.pages[2].subPages;
     });
   }

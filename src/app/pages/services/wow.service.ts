@@ -9,6 +9,8 @@ export class WowService {
   constructor() { }
 
   wowInit() {
-    new WOW().init();
+    new WOW({
+      live: false
+  }).init();
   }
 }

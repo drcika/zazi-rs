@@ -1,0 +1,17 @@
+<mat-menu #subMenu="matMenu" [overlapTrigger]="false">
+  <span *ngFor="let subItem of subItems">
+
+    <button class="cust-btn" *ngIf="subItem.subPages && subItem.subPages.length > 0"
+      mat-menu-item color="primary" [matMenuTriggerFor]="menu.subMenu">
+      {{subItem.displayName}}
+    </button>
+    
+    <app-menu-item #menu [subItems]="subItem.subPages"></app-menu-item>
+
+    <button class="cust-btn rounded" *ngIf="!subItem.subPages || subItem.subPages.length === 0"
+      mat-menu-item [routerLink]="subItem.route">
+      {{subItem.displayName}}
+    </button>
+
+  </span>
+</mat-menu>

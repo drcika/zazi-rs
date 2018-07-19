@@ -4,22 +4,22 @@
       
       <ng-temlate *ngIf="kolekcija.id === 'okoLavirinta'">
         <h2 class="my-4 pt-4">Collection "Oko Lavirinta"</h2>
-        <img class="" *ngFor="let img of imageData[0].srcUrl" [src]="img">
+        <img *ngFor="let img of imageData[0].srcUrl" [src]="img">
       </ng-temlate>
 
       <ng-temlate *ngIf="kolekcija.id === 'dontTouchme'">
         <h2 class="my-4 pt-4">Collection "Don't touch me"</h2>
-        <img *ngFor="let img of imageData.dontTouchme.srcUrl" [src]="img">
+        <img *ngFor="let img of imageData[1].srcUrl" [src]="img">
       </ng-temlate>
 
       <ng-temlate *ngIf="kolekcija.id === 'myWorld'">
         <h2 class="my-4 pt-4">Collection "My world"</h2>
-        <img *ngFor="let img of imageData.myWorld.srcUrl" [src]="img">
+        <img *ngFor="let img of imageData[2].srcUrl" [src]="img">
       </ng-temlate>
 
       <ng-temlate *ngIf="kolekcija.id === 'commercialShoes'">
         <h2 class="my-4 pt-4">Commercial shoes</h2>
-        <img *ngFor="let img of imageData.commercialShoes.srcUrl" [src]="img">
+        <img *ngFor="let img of imageData[3].srcUrl" [src]="img">
       </ng-temlate>
     </ng-container>
   </div>

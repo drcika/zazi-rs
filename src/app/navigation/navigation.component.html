@@ -1,39 +1,30 @@
 <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark" [containerInside]="true">
-  <logo><a class="logo navbar-brand" routerLink="/"><strong>
-    <img src="../assets/logo.png" alt="Zorana Petrovic Zazi" width="100px">
-  </strong></a></logo>
+  <logo>
+    <a class="logo navbar-brand" routerLink="/">
+      <img src="../assets/logo.png" alt="Zorana Petrovic Zazi" width="100px">
+    </a>
+  </logo>
   <links>
     <ul class="navbar-nav m-auto">
-      <li class="nav-item waves-light" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" mdbRippleRadius>
-        <a class="nav-link" routerLink="/">Home<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item waves-light" routerLinkActive="active" mdbRippleRadius>
-        <a class="nav-link" routerLink="/biography">Biography</a>
-      </li>
-      <li class="nav-item dropdown" routerLinkActive="active" dropdown>
-        <a dropdownToggle mdbWavesEffect type="button"
-          class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
-              Collections<span class="caret"></span></a>
-        <div id="dropdown-menu" *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
-          <a class="dropdown-item nav-link" [routerLink]="['/collections', 'okoLavirinta']">"Oko Lavirinta"</a>
-          <a class="dropdown-item nav-link" [routerLink]="['/collections', 'dontTouchme']">"Don't touch me"</a>
-          <a class="dropdown-item nav-link" [routerLink]="['/collections', 'myWorld']">"My world"</a>
-          <a class="dropdown-item nav-link" [routerLink]="['/collections', 'commercialShoes']">Commercial shoes</a>
-        </div>
-      </li>
-      <li class="nav-item waves-light" routerLinkActive="active" mdbRippleRadius>
-        <a class="nav-link" routerLink="/contact">Contact</a>
+      <li *ngFor="let item of navItems" class="nav-item m-auto"
+       routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" mdbRippleRadius>
+
+        <button class="px-3" *ngIf="item.subPages && item.subPages.length > 0"
+          mat-button [matMenuTriggerFor]="menu.subMenu">
+          {{item.displayName}}
+        </button>
+        
+        <app-menu-item #menu [subItems]="item.subPages"></app-menu-item>
+        
+        <button class="px-3" *ngIf="!item.subPages || item.subPages.length === 0"
+        mat-button [routerLink]="item.route">
+        {{item.displayName}}
+        </button>
       </li>
     </ul>
     <ul class="navbar-nav nav-flex-icons">
-      <li class="nav-item waves-light" mdbRippleRadius>
-        <a href="https://www.facebook.com/zorana.p.zazi" target="_blank" class="nav-link"><i class="fa fa-facebook"></i></a>
-      </li>
-      <li class="nav-item waves-light" mdbRippleRadius>
-        <a href="https://www.linkedin.com/in/zorana-petrovi%C4%87-zazi/" target="_blank" class="nav-link"><i class="fa fa-linkedin"></i></a>
-      </li>
-      <li class="nav-item waves-light" mdbRippleRadius>
-        <a href="https://www.instagram.com/zorana_zazi/" target="_blank" class="nav-link"><i class="fa fa-instagram"></i></a>
+      <li *ngFor="let socItem of socItems" class="nav-item" mdbRippleRadius>
+        <a href="{{socItem.route}}" target="_blank" class="nav-link"><i class="{{socItem.class}}"></i></a>
       </li>
     </ul>
   </links>

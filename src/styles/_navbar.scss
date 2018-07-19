@@ -1,11 +1,21 @@
 .navbar {
   background-color: $bg-color-primarily;
   li {
-    margin-left: 10px;
-    div#dropdown-menu {
-      a:hover {
-        background-color: $bg-color-secondary;
-      }
+    .mat-button {
+      font-size: 1.2rem;
+      font-weight: 300;
+      padding: 0;
+    }
+  }
+}
+div.mat-menu-panel{
+  margin-top: 10px;
+  padding: 0 10px;
+  span{
+    .cust-btn:hover {
+      background-color: $bg-color-secondary;
+      color: $txt-color;
+      // font-weight: 300;
     }
   }
 }

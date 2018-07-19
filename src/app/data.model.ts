@@ -1,8 +1,11 @@
-export class DataModel {
-  public pages?: DataModel;
-  public socMedia?: DataModel;
-  public displayName?: string;
-  public route?: string;
-  public subPages?: DataModel;
-  public srcUrl?: any;
-  } 
+export class dataModel {
+
+   pages?: dataModel[];
+   socMedia?: dataModel[];
+   subPages?: dataModel[];
+
+   displayName?: string;
+   route?: string;
+   srcUrl?: any;
+   class?: string;
+  }
