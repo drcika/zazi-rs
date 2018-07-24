@@ -33,15 +33,12 @@ export class GalleryComponent implements OnInit {
       (params: Params) => {
         this.collections.collection = params['collection']
         this.collections.subCollection = params['subCollection']
-        console.log(this.collections.collection);
-        console.log(this.collections.subCollection);
       }
 
     );
     this.httpService.getData()
     .subscribe((data: dataModel): void => {
       this.imageData = data.pages[2].subPages;
-      this.subImageData = data.pages[2].subPages[4].subPages;
     });
   }
 

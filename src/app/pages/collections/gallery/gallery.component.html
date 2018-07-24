@@ -1,16 +1,14 @@
 <div class="container" gallerize>
   <div class="col-lg-12 card-shadow my-5 pb-5 text-center">
 
-    <ng-container>
+    <ng-container *ngFor="let colection of imageData">
 
-      <ng-temlate *ngFor="let colection of imageData">
-        <span *ngIf="colection.displayName === collections.collection">
-          <h2 class="my-4 pt-4">Collection "{{colection.displayHeader}}"</h2>
-          <img *ngFor="let img of colection.srcUrl" [src]="img">
-        </span>
+      <ng-temlate *ngIf="colection.displayName === collections.collection">
+        <h2 class="my-4 pt-4">Collection "{{colection.displayHeader}}"</h2>
+        <img *ngFor="let img of colection.srcUrl" [src]="img">
       </ng-temlate>
 
-      <ng-temlate *ngFor="let subColection of subImageData">
+      <ng-temlate *ngFor="let subColection of colection.subPages">
         <span *ngIf="subColection.displayName === collections.subCollection">
           <h2 class="my-4 pt-4">Collection "{{subColection.displayHeader}}"</h2>
           <img *ngFor="let img of subColection.srcUrl" [src]="img">
