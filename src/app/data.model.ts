@@ -4,8 +4,10 @@ export class dataModel {
    socMedia?: dataModel[];
    subPages?: dataModel[];
 
-   displayName?: string;
-   route?: string;
    srcUrl?: any;
+
+   displayName?: string;
+   displayHeader?: string;
+   route?: string;
    class?: string;
   }

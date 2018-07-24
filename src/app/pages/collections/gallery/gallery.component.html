@@ -1,26 +1,23 @@
 <div class="container" gallerize>
   <div class="col-lg-12 card-shadow my-5 pb-5 text-center">
-    <ng-container *ngIf="imageData">
-      
-      <ng-temlate *ngIf="kolekcija.id === 'okoLavirinta'">
-        <h2 class="my-4 pt-4">Collection "Oko Lavirinta"</h2>
-        <img *ngFor="let img of imageData[0].srcUrl" [src]="img">
+
+    <ng-container>
+
+      <ng-temlate *ngFor="let colection of imageData">
+        <span *ngIf="colection.displayName === collections.collection">
+          <h2 class="my-4 pt-4">Collection "{{colection.displayHeader}}"</h2>
+          <img *ngFor="let img of colection.srcUrl" [src]="img">
+        </span>
       </ng-temlate>
 
-      <ng-temlate *ngIf="kolekcija.id === 'dontTouchme'">
-        <h2 class="my-4 pt-4">Collection "Don't touch me"</h2>
-        <img *ngFor="let img of imageData[1].srcUrl" [src]="img">
+      <ng-temlate *ngFor="let subColection of subImageData">
+        <span *ngIf="subColection.displayName === collections.subCollection">
+          <h2 class="my-4 pt-4">Collection "{{subColection.displayHeader}}"</h2>
+          <img *ngFor="let img of subColection.srcUrl" [src]="img">
+        </span>
       </ng-temlate>
 
-      <ng-temlate *ngIf="kolekcija.id === 'myWorld'">
-        <h2 class="my-4 pt-4">Collection "My world"</h2>
-        <img *ngFor="let img of imageData[2].srcUrl" [src]="img">
-      </ng-temlate>
-
-      <ng-temlate *ngIf="kolekcija.id === 'commercialShoes'">
-        <h2 class="my-4 pt-4">Commercial shoes</h2>
-        <img *ngFor="let img of imageData[3].srcUrl" [src]="img">
-      </ng-temlate>
     </ng-container>
+
   </div>
 </div>

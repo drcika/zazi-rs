@@ -9,15 +9,8 @@ import { ContactModel } from '../contact/contact.model';
 })
 export class HttpService {
 
-  // private newMessages: ContactModel;
-
   constructor(private http: HttpClient, private db: AngularFirestore) { }
 
-  // addNewContactToDb() {
-  //   this.addDataToDatabase({
-  //     ...this.newMessages,
-  //   });
-  // }
   getData() {
     return this.http.get('/assets/data/data.json');
   }

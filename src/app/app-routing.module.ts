@@ -12,7 +12,8 @@ const routes: Routes = [
   {path: 'biography', component: BiographyComponent },
   {path: 'contact', component: ContactComponent },
   {path: 'collections', component: CollectionsComponent },
-  {path: 'collections/:id', component: GalleryComponent },
+  {path: 'collections/:collection', component: GalleryComponent },
+  {path: 'collections/:collection/:subCollection', component: GalleryComponent }
 ];
 
 @NgModule({

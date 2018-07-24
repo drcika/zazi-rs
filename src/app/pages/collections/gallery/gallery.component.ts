@@ -14,7 +14,8 @@ import { Lightbox } from '@ngx-gallery/lightbox';
 })
 export class GalleryComponent implements OnInit {
  public imageData: dataModel[];
- public kolekcija: {id: string};
+ public subImageData: dataModel[];
+ public collections: {collection: string, subCollection: string};
 
   constructor( 
     private httpService: HttpService,
@@ -24,17 +25,23 @@ export class GalleryComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.kolekcija = {
-      id: this.route.snapshot.params['id'],
+    this.collections = {
+      collection: this.route.snapshot.params['collection'],
+      subCollection: this.route.snapshot.params['subCollection'],
     }
     this.route.params.subscribe(
       (params: Params) => {
-        this.kolekcija.id = params['id']
+        this.collections.collection = params['collection']
+        this.collections.subCollection = params['subCollection']
+        console.log(this.collections.collection);
+        console.log(this.collections.subCollection);
       }
+
     );
     this.httpService.getData()
     .subscribe((data: dataModel): void => {
       this.imageData = data.pages[2].subPages;
+      this.subImageData = data.pages[2].subPages[4].subPages;
     });
   }
 
