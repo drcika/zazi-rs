@@ -7,7 +7,7 @@
   <links>
     <ul class="navbar-nav m-auto">
       <li *ngFor="let item of navItems" class="nav-item m-auto"
-       routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" mdbRippleRadius>
+       routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
 
         <button class="px-3" *ngIf="item.subPages && item.subPages.length > 0"
           mat-button [matMenuTriggerFor]="menu.subMenu">
@@ -23,7 +23,7 @@
       </li>
     </ul>
     <ul class="navbar-nav nav-flex-icons">
-      <li *ngFor="let socItem of socItems" class="nav-item" mdbRippleRadius>
+      <li *ngFor="let socItem of socItems" class="nav-item">
         <a href="{{socItem.route}}" target="_blank" class="nav-link"><i class="{{socItem.class}}"></i></a>
       </li>
     </ul>
