@@ -3,14 +3,14 @@
 
     <ng-container *ngFor="let colection of imageData">
 
-      <ng-temlate *ngIf="colection.displayName === collections.collection">
-        <h2 class="my-4 pt-4">Collection "{{colection.displayHeader}}"</h2>
+      <ng-temlate *ngIf="colection.id === collections.collection">
+        <h2 class="my-4 pt-4">Collection "{{ colection.displayName }}"</h2>
         <img *ngFor="let img of colection.srcUrl" [src]="img">
       </ng-temlate>
 
       <ng-temlate *ngFor="let subColection of colection.subPages">
-        <span *ngIf="subColection.displayName === collections.subCollection">
-          <h2 class="my-4 pt-4">Collection "{{subColection.displayHeader}}"</h2>
+        <span *ngIf="subColection.id === collections.subCollection">
+          <h2 class="my-4 pt-4">Collection "{{ subColection.displayName }}"</h2>
           <img *ngFor="let img of subColection.srcUrl" [src]="img">
         </span>
       </ng-temlate>
